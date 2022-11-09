@@ -1,0 +1,79 @@
+jwt - token generation-user authentication
+jsonwebtoken-library used to generate tokens --npm i jsonwebtoken
+sign()- method  used to generate token
+
+
+token generated and send to client
+
+token validation
+
+we use  this method "middlewares" for token validation 
+
+
+middlewares  -- method - 3 arrguments 
+                        request,
+                        responce, 
+                        next
+
+ 1. application specific middleware
+ 2. router specific middleware
+
+
+
+internal server error
+
+try, catch method
+try -- details mentioned theree
+
+catch  -- error message
+
+mongoDB have no strcuture
+
+mongo shell commands
+...............
+//to see databases
+show dbs
+
+use databases
+     use bankserver
+see collection inside that db
+    show collections
+view datas inside collection
+    db.users.find()        //users -- collection name
+perticular single data 
+    db.users.findOne({acno:1000})
+    present - Object
+    not present - null
+to insert data
+    db.users.insertOne({"acno":1000,"username":"Abhinav","password":1234,"balance":1000000,"transaction":[]})        
+        db.users.insertOne({"acno":1000,"username":"Abhinav"})
+
+display person having balanace 100000 abv 
+    db.users.find({balance:{$gt:100000}})
+
+delete data
+    db.users.deleteOne({acno:1000})
+    delete count 1
+    db.users.deleteOne({acno:1000})
+    delete count 0
+
+update data
+    db.users.updateOne({username:"Abhinav"},{$set{username:"Anu"}},upsert:true)    
+
+
+CRUD   create,read,update,delete    
+
+
+register    insert
+login       findOne
+deposit     update
+withdraw    update
+
+
+
+banks server bankend .....
+    mongoose --library      npm i mongoose  //
+
+
+diff ports communicate(data sharing)--cors(cross sharing resource sharing)
+        npm i cors   //comments
